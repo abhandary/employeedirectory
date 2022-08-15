@@ -110,7 +110,7 @@
 		4E61AB2A286F756700C24248 = {
 			isa = PBXGroup;
 			children = (
-				4E61AB35286F756700C24248 /* ReqRes */,
+				4E61AB35286F756700C24248 /* EmployeeDirectory */,
 				4E61AB4C286F756900C24248 /* EmployeeDirectoryTests */,
 				4E61AB34286F756700C24248 /* Products */,
 			);
@@ -125,7 +125,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4E61AB35286F756700C24248 /* ReqRes */ = {
+		4E61AB35286F756700C24248 /* EmployeeDirectory */ = {
 			isa = PBXGroup;
 			children = (
 				4E61AB842871128000C24248 /* Utils */,
@@ -138,7 +138,7 @@
 				4E61AB41286F756800C24248 /* LaunchScreen.storyboard */,
 				4E61AB44286F756800C24248 /* Info.plist */,
 			);
-			path = ReqRes;
+			path = EmployeeDirectory;
 			sourceTree = "<group>";
 		};
 		4E61AB4C286F756900C24248 /* EmployeeDirectoryTests */ = {
