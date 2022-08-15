@@ -77,7 +77,7 @@ private let TAG = "EmployeeListViewController"
       self.tableView.refreshControl?.endRefreshing()
       showErrorState()
       return
-    } else if employees.count == 0 {
+    } else if employees.count == 0 && viewModel.employeeListState == .loaded {
       self.tableView.refreshControl?.endRefreshing()
       showEmptyState()
       return
