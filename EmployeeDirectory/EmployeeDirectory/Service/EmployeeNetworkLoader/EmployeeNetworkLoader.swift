@@ -11,11 +11,15 @@ private let TAG = "EmployeeNetworkLoader"
 
 struct EmployeeNetworkLoader: EmployeeNetworkLoaderProtocol {
 
+  static let defaultEndPoint = "https://s3.amazonaws.com/sq-mobile-interview/employees.json"
+  static let malformedEndPoint = "https://s3.amazonaws.com/sq-mobile-interview/employees_malformed.json"
+  static let emptyResponseEndPoint = "https://s3.amazonaws.com/sq-mobile-interview/employees_empty.json"
+  
   let session: URLSessionProtocol
   let endpoint: String
   
   init(session: URLSessionProtocol = URLSession.shared,
-       endpoint: String = "https://s3.amazonaws.com/sq-mobile-interview/employees.json") {
+       endpoint: String = EmployeeNetworkLoader.defaultEndPoint) {
     self.session = session
     self.endpoint = endpoint
   }

@@ -39,6 +39,7 @@
 		4E61ABFF28A9B24E00C24248 /* EmployeeDirectoryTestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E61ABFE28A9B24E00C24248 /* EmployeeDirectoryTestUtils.swift */; };
 		4E61AC0228A9B53400C24248 /* AssetStoreUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E61AC0128A9B53400C24248 /* AssetStoreUnitTests.swift */; };
 		4E61AC0428A9B59300C24248 /* MockFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E61AC0328A9B59300C24248 /* MockFileManager.swift */; };
+		4E61AC0628AA17D800C24248 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E61AC0528AA17D800C24248 /* EmptyStateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		4E61ABFE28A9B24E00C24248 /* EmployeeDirectoryTestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDirectoryTestUtils.swift; sourceTree = "<group>"; };
 		4E61AC0128A9B53400C24248 /* AssetStoreUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetStoreUnitTests.swift; sourceTree = "<group>"; };
 		4E61AC0328A9B59300C24248 /* MockFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFileManager.swift; sourceTree = "<group>"; };
+		4E61AC0528AA17D800C24248 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 				4E61ABDF28A8CC6100C24248 /* ErrorStateView.swift */,
 				4E61ABE128A8D53100C24248 /* InitialStateView.swift */,
 				4E61ABE328A8DA7700C24248 /* Launch Screen.storyboard */,
+				4E61AC0528AA17D800C24248 /* EmptyStateView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 			files = (
 				4E61AB6E286F7EEC00C24248 /* Employee.swift in Sources */,
 				4E61AB86287112C700C24248 /* UIColor+random.swift in Sources */,
+				4E61AC0628AA17D800C24248 /* EmptyStateView.swift in Sources */,
 				4E61AB6A286F779300C24248 /* EmployeeTableViewCell.swift in Sources */,
 				4E61AB6C286F7EC100C24248 /* EmployeeListViewModel.swift in Sources */,
 				4E61AB9128728EEC00C24248 /* EmployeesTableSection.swift in Sources */,
@@ -568,7 +572,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ReqRes/Info.plist;
+				INFOPLIST_FILE = EmployeeDirectory/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -580,7 +584,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = akshayb.ReqRes;
+				PRODUCT_BUNDLE_IDENTIFIER = akshayb.EmployeeDirectory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -596,7 +600,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ReqRes/Info.plist;
+				INFOPLIST_FILE = EmployeeDirectory/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -608,7 +612,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = akshayb.ReqRes;
+				PRODUCT_BUNDLE_IDENTIFIER = akshayb.EmployeeDirectory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

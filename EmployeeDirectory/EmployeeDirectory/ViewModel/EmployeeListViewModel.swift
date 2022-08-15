@@ -43,12 +43,15 @@ actor EmployeeListViewModel {
       Log.error(TAG, error)
       await update(employees: [], state: .error)
     case .success(let employees):
-      Log.verbose(TAG, employees)
       await update(employees: employees.employees, state: .loaded)
     }
   }
   
   private func update(employees: [Employee], state: EmployeeListState) async {
+    let employees = employees.sorted {
+      $0.team < $1.team ||
+      $0.team == $1.team && $0.fullName < $1.fullName
+    }
     await MainActor.run {
       self.employeeListState = state
       self.employees = employees

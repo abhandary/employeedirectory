@@ -18,6 +18,7 @@ private let TAG = "EmployeeListViewController"
   
   var diffableDataSource: UITableViewDiffableDataSource<EmployeesTableSection, Employee.ID>?
   
+  var emptyViewController: UIViewController?
   var initialViewController: UIViewController?
   var errorViewController: UIViewController?
   let tableView: UITableView!
@@ -76,9 +77,16 @@ private let TAG = "EmployeeListViewController"
       self.tableView.refreshControl?.endRefreshing()
       showErrorState()
       return
+    } else if employees.count == 0 {
+      self.tableView.refreshControl?.endRefreshing()
+      showEmptyState()
+      return
+    } else {
+      removeErrorView()
+      removeInitialView()
+      removeEmptyView()
     }
-    removeInitialView()
-    removeErrorView()
+    
     self.tableView.refreshControl?.endRefreshing()
     
     var snapshot = NSDiffableDataSourceSnapshot<EmployeesTableSection, Employee.ID>()
@@ -116,7 +124,7 @@ extension EmployeeListViewController {
   private func showErrorState() {
     if errorViewController == nil {
       errorViewController = UIHostingController(rootView: ErrorStateView())
-      let color = UIColor(red: 0.129317, green: 0.825341, blue: 0.479609, alpha: 0.9)
+      let color = UIColor(red: 0.129317, green: 0.825341, blue: 0.479609, alpha: 1.0)
       errorViewController?.view.backgroundColor = color
     }
     guard let errorViewController = errorViewController else {
@@ -145,6 +153,23 @@ extension EmployeeListViewController {
   
   private func removeInitialView() {
     initialViewController?.view.removeFromSuperview()
+  }
+  
+  private func showEmptyState() {
+    if emptyViewController == nil {
+      emptyViewController = UIHostingController(rootView: EmptyStateView())
+      let color = UIColor.random()
+      emptyViewController?.view.backgroundColor = color
+    }
+    guard let emptyViewController = emptyViewController else {
+      return
+    }
+    self.tableView.addSubview(emptyViewController.view)
+    emptyViewController.view.frame = self.view.frame
+  }
+  
+  func removeEmptyView() {
+    emptyViewController?.view.removeFromSuperview()
   }
 }
 
