@@ -80,12 +80,12 @@ actor AssetStore {
   
   private func getDiskCachedAsset(networkURL: URL) -> Asset? {
     guard let fileURL = getFileURL(usingNetworkURL: networkURL) else {
-      Log.error(TAG, "error: unable to get file URL")
+      Log.error(TAG, "unable to get file URL")
       return nil
     }
     
     if self.fileManager.fileExists(atPath: fileURL.path) == false {
-      Log.error(TAG, "No file stored for file URL - \(fileURL)")
+      Log.verbose(TAG, "No file stored for file URL - \(fileURL)")
       return nil
     }
     if let savedData = self.fileManager.contents(atPath: fileURL.path) {
@@ -100,7 +100,7 @@ actor AssetStore {
   private func write(data: Data, networkURL: URL)  {
     
     guard let fileURL = getFileURL(usingNetworkURL: networkURL) else {
-      Log.error(TAG, "error: unable to get file URL")
+      Log.error(TAG, "unable to get file URL")
       return
     }
     
