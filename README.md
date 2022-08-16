@@ -40,13 +40,13 @@
 ## Did you make any trade-offs for this project? What would you have done differently with more time?
 
 **UI**
-* Used a basic layout for the table view and a basic SwiftUI views for empty, error states. These could be improved to be visually more appealing. 
+* Used a basic layout for the table view and basic SwiftUI views for empty, error states. These could be improved to be visually more appealing. 
 
 **Inter Module Communication**
 * Potential use of Combine as glue between service layer and view model to have consistency in inter module communication
 
 **Asset Store**
-* Use of batched writes, to reduce disk writes, this would speed up app’s overall performance, making it more responsive specially at app cold-start, and reduces wear on users’ device storage
+* Use of batched writes to reduce disk writes, this would speed up app’s overall performance, making it more responsive specially on app cold-start, and reduces wear on users’ device storage
 * Limiting the amount of batched up, pending writes and use of opportunistic flushing to disk to decrease overall memory use.
 
 ## What do you think is the weakest part of your project?
@@ -58,4 +58,3 @@
 None. All written by me, reuse of some code for the asset store from a different demo project. 
 
 ## Is there any other information you’d like us to know?
-- 
